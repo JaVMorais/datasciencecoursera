@@ -7,7 +7,7 @@ The codebook is divided into three main sections: _Original Data_, _Final Data_,
 
 ### Data recording and pre-processing
 
-According to the original source, the experiment _Human Activity Recognition Using Smartphones Dataset - Version 1.0_ was carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each volunteer performed six activities:
+According to the original source [1], the experiment that led to the _Human Activity Recognition Using Smartphones Dataset - Version 1.0_  was carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each volunteer performed six activities:
 <ol>
 <li>WALKING</li>
 <li>WALKING_UPSTAIRS</li>
@@ -22,7 +22,7 @@ The data recorded from the accelerometers and gyroscopes was pre-processed using
 
 After the pre-processing, total and estimated body accelerations where then stored in the files 'total\_acc\_[X/Y/Z]\_[train/test].txt' and 'body\_acc\_[X/Y/Z]\_[train/test].txt', while the angular velocity from the gyroscope was stored in the files 'body\_gyro\_[X/Y/Z]\_[train/test].txt', where each row has 128 elements corresponding to the 128 readings/window.
 
-> __NOTE:__ 
+__Note__ 
 
 Unfortunately, there is no information on the correspondence between each of the 7000+ rows and the respective activity and subject, making these files unusable without further investigation.
 
@@ -81,16 +81,16 @@ The angle between them were then computed using the angle() function.
 
 In total, a list of 561 final features is provided in the file 'features.txt'. The values of these features is stored in the columns of the files 'train/X_train.txt' and 'test/X_test.txt', where each rows corresponds to a different observation. The corresponding subject and activity are stored in the files 'train/subject_train.txt'|'test/subject_test.txt' and 'train/y_train.txt'|'test/y_test.txt', respectivel.
 
-> __Original notes:__
-<ul>
-<li>Features are normalized and bounded within [-1,1]. </li>
-<li>Each feature vector is a row on the text file. </li>
-<li>The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2). </li>
-<li>The gyroscope units are rad/seg. </li>
-<li>A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen in the following link: http://www.youtube.com/watch?v=XOEN9W05_4A </li>
-<ul>
+__Original notes__
 
-> __Further notes:__
+* Features are normalized and bounded within [-1,1].
+* Each feature vector is a row on the text file.
+* The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
+* The gyroscope units are rad/seg.
+*A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen in the following link: http://www.youtube.com/watch?v=XOEN9W05_4A
+
+__Further notes__
+
 Some imprecisions were detected in the feature names presented in the file 'features.txt':
 <ul>
 <li>In the rows 516-554, the label 'Body' appears duplicated.  </il>
@@ -205,3 +205,8 @@ The column _observation_ is then separated into four different columns: _type_, 
 * Finally, the lists of base features, types and directions are stored in the respective .txt files in following format: 
     * The first column indicates the order of the factor levels
     * The second column indicates the names of the factor levels.
+    
+## References
+
+[1] - D. Anguita, A. Ghio, L. Oneto, X. Parra and J. L. Reyes-Ortiz, _A Public Domain Dataset for Human Activity
+Recognition Using Smartphones_, ESANN 2013 proceedings, European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning. Bruges (Belgium), 24-26 April 2013
