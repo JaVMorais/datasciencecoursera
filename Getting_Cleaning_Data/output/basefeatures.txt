@@ -1,5 +1,0 @@
-1	bodyacc
-2	gravityacc
-3	bodyaccjerk
-4	bodygyro
-5	bodygyrojerk
